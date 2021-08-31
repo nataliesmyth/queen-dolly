@@ -12,7 +12,7 @@ A quick introduction of the minimal setup you need to get a hello world up &
 running.
 
 ```shell
-packagemanager install awesome-project
+npm install awesome-project
 awesome-project start
 awesome-project "Do something!"  # prints "Nah."
 ```
