@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events Show Page</title>
+</head>
+<body>
+    <nav>
+        <a href="/events/new">Create a New Event</a>
+    </nav>
+
+    <h1>Events Show Page</h1>
+    The <%=event.title; %> is on <%=event.date; %>.
+        <% if(event.title != ''){ %>
+            Your event is coming up.
+        <% } else { %>
+            No event
+        <% } %>
+</body>
+</html>

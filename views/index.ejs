@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link rel="stylesheet" href="/css/app.css">
+    </head>
+    <body>
+
+        <nav>
+            <a href="/events/new">Create a New Event</a>
+        </nav>
+
+        
+        <h1>Events index page</h1>
+        <ul>
+            <% for(let i = 0; i < events.length; i++) { %>
+                <li>
+			        The <a href="/events/<%=i%>"><%=events[i].title; %></a> is  <%=events[i].description; %>.
+			        <% if(events[i].attending === true){ %>
+				        You have an event
+			        <% } else { %>
+				        You do not have an event
+			        <% } %>
+			    <!--  ADD DELETE FORM HERE-->
+			    <form>
+                    <form action="/events/<%=i; %>?_method=DELETE" method="POST">
+                </form>
+                <!-- Add edit link here  -->
+			        <a href="/events/<%=i; %>/edit">Edit</a>
+                </li>
+            <% } %>
+        </ul>
+        
+    </body>
+</html>

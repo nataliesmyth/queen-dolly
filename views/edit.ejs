@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link rel="stylesheet" href="/css/app.css">
+    </head>
+    <body>
+        <h1>Edit Event Page</h1>
+	<!--  ADD action attribute to form tag-->
+
+    <form action="/events/<%=index%>?_method=PUT" method="POST">
+		Title: <input type="text" name="title" value="<%=event.title%>"/><br/>
+		Description: <input type="text" name="description" value="<%=event.description%>"/><br/>
+		Date: <input type="date" name="date" value="event.date">
+        Attending: <input type="checkbox" name="attending" value="<%=event.attending%>"
+			<% if(event.attending === true){ %>
+				checked
+			<% } %>
+		/>
+		<br/>
+		<input type="submit" name="" value="Submit Changes"/>
+        </form>
+    </body>
+</html>

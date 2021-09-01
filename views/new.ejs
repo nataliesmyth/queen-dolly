@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link rel="stylesheet" href="/css/app.css">
+    </head>
+    <body>
+        <h1>New Events page</h1>
+        <!--  NOTE: action will be the route, method will be the HTTP verb-->
+        <form action="/events" method="POST">
+            Title: <input type="text" name="name" /><br/>
+            Description: <input type="text" name="description" /><br/>
+            Date: <input type="datetime-local" min="2021-08-30" name="datetime" id="datetime"/><br/>
+            Attending: <input type="checkbox" name="attending" id="">
+            <input type="submit" name="" value="Create Event"/>
+        </form>
+    </body>
+</html>
