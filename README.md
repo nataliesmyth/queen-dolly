@@ -11,8 +11,10 @@ awesome when someone starts to use it.
 A quick introduction of the minimal setup you need to get a hello world up &
 running.
 
+Download Node.js and NPM [here](https://nodejs.org/en/)
+
 ```shell
-npm install awesome-project
+npm install
 awesome-project start
 awesome-project "Do something!"  # prints "Nah."
 ```
