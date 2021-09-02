@@ -4,25 +4,50 @@ const events = require('./models/events.js');
 const bodyParser = require('body-parser');
 //include the method-override package
 var methodOverride = require('method-override');
+const PORT = process.env.PORT || 4000;
+
+
+// Events Controller
+const eventsController = require('./controllers/eventsController.js');
+const { response } = require('express');
 
 // set the view engine to ejs
 app.set('view engine', 'ejs');
 
 
-// Middleware
+
+// -------------- Middleware ---------------- //
+
+
 app.use((req, res, next) => {
     console.log('I run for all routes');
     next();
 });
 
-app.use(bodyParser.urlencoded({extended: false}));
 
-//use methodOverride.  We'll be adding a query parameter to our delete form named _method
+// Method Override- changes GET requests to DELETE if the request includes a method override query param
+// We'll be adding a query parameter to our delete form named _method
 app.use(methodOverride('_method'));
 
-app.get('/events/', (req, res) => {
-    res.send(events);
+// BodyParser: Parses the request object and puts the data into a property called 'body'
+// .use() method responds to ALL requests (GET, PUT/PATCH/,POST, DELETE)
+app.use(express.urlencoded({extended: false}));
+
+// -------------- Routes ---------------- //
+
+// Home (root route)
+app.get('/', (req, res) => {
+    response.send('<h1>Welcome to Express Family App!')
 });
+
+app.get('/events', (req, res) => {
+    res.render('index.ejs');
+});
+// -------------- 404 Route ---------------- //
+
+app.get('*', (req, res) => {
+    res.send('<h1>404 Page Not Found</h1>');
+  });
 
 //put this above your show.ejs file
 app.get('/events/new', (req, res) => {
@@ -63,16 +88,15 @@ app.delete('/events/:index', (req, res) => {
 });
 
 app.put('/events/:index', (req, res) => { //:index is the index of our event array that we want to change
-    if(req.body.readyToEat === 'on'){ //if checked, req.body.readyToEat is set to 'on'
-        req.body.readyToEat = true;
-    } else { //if not checked, req.body.readyToEat is undefined
-        req.body.readyToEat = false;
+    if(req.body.attending === 'on'){ //if checked, req.body.readyToEat is set to 'on'
+        req.body.attending = true;
+    } else { //if not checked, req.body.attending is undefined
+        req.body.attending = false;
     }
-	events[req.params.index] = req.body; //in our fruits array, find the index that is specified in the url (:index).  Set that element to the value of req.body (the input data)
+	events[req.params.index] = req.body; //in our events array, find the index that is specified in the url (:index).  Set that element to the value of req.body (the input data)
 	res.redirect('/events'); //redirect to the index page
 });
 
-app.listen(3000, () => {
-    console.log('i am listening')
-});
+app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
+
 

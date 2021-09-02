@@ -1,36 +1,50 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title></title>
-        <link rel="stylesheet" href="/css/app.css">
-    </head>
-    <body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Express events</title>
+</head>
+<body>
 
-        <nav>
-            <a href="/events/new">Create a New Event</a>
-        </nav>
+  <header>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/events">events</a>
+      <a href="/events/new">Add event</a>
+    </nav>
+  </header>
 
+  <main>
+    <h1>Events Index Page</h1>
+
+    <% if (events.length) { %>
+      <% for (let i = 0; i < events.length; i++) { %>
+
+        <a href="/events/<%= events[i]._id %>">
+          <h4><%= events[i].name %></h4>
+        </a>
         
-        <h1>Events index page</h1>
-        <ul>
-            <% for(let i = 0; i < events.length; i++) { %>
-                <li>
-			        The <a href="/events/<%=i%>"><%=events[i].title; %></a> is  <%=events[i].description; %>.
-			        <% if(events[i].attending === true){ %>
-				        You have an event
-			        <% } else { %>
-				        You do not have an event
-			        <% } %>
-			    <!--  ADD DELETE FORM HERE-->
-			    <form>
-                    <form action="/events/<%=i; %>?_method=DELETE" method="POST">
-                </form>
-                <!-- Add edit link here  -->
-			        <a href="/events/<%=i; %>/edit">Edit</a>
-                </li>
-            <% } %>
-        </ul>
-        
-    </body>
+        <!-- Delete Button -->
+        <form style="display: inline-block;" method="POST" action="/events/<%= events[i]._id %>?_method=DELETE">
+          <button type="submit">Delete</button>
+        </form>
+  
+        <a href="/events/<%= events[i]._id %>/edit">
+          <button>Edit</button>
+        </a>
+  
+  
+        <hr/>
+      <% } %>
+    <% } else { %>
+      <h4>Sorry, doesn't look like we have any event</h4>
+    <% } %>
+
+    
+    
+
+  </main>
+
+</body>
 </html>

@@ -8,15 +8,35 @@
 </head>
 <body>
     <nav>
+        <a href="/">Home</a>
+        <a href="/events">Events</a>
         <a href="/events/new">Create a New Event</a>
     </nav>
 
-    <h1>Events Show Page</h1>
-    The <%=event.title; %> is on <%=event.date; %>.
-        <% if(event.title != ''){ %>
-            Your event is coming up.
-        <% } else { %>
-            No event
-        <% } %>
+    <main>
+        <h1>Events Show Page</h1>
+    
+            <!-- EJS TAGS -->
+            <!-- <%  %> Parse JS (will not show on HTML page) -->
+    
+            <!-- <%= %> Parse & Render JS (will show on HTML page) -->
+        
+        <h4>
+            <%= event.name %>
+        </h4>
+    
+        <p>
+            <%= event.color %>
+        </p>
+    
+        The <%=event.title; %> is on <%=event.date; %>.
+            <% if(event.title != ''){ %>
+                Your event is coming up.
+            <% } else { %>
+                No event
+            <% } %>
+        
+    </main>
+
 </body>
 </html>
