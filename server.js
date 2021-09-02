@@ -2,14 +2,16 @@ const express = require('express');
 const app = express();
 const events = require('./models/events.js');
 const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
+const db = mongoose.connection;
 //include the method-override package
 var methodOverride = require('method-override');
 const PORT = process.env.PORT || 4000;
 
 
 // Events Controller
-const eventsController = require('./controllers/eventsController.js');
-const { response } = require('express');
+const eventsController = require('./controllers/events.js');
+app.use('/events', eventsController);
 
 // set the view engine to ejs
 app.set('view engine', 'ejs');
