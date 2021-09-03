@@ -15,13 +15,13 @@ app.use((req, res, next) => {
     next();
 });
 
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(express.urlencoded({extended: false}));
 
 //use methodOverride.  We'll be adding a query parameter to our delete form named _method
 app.use(methodOverride('_method'));
 
 app.get('/events/', (req, res) => {
-    res.send(events);
+    res.render('index.ejs');
 });
 
 //put this above your show.ejs file

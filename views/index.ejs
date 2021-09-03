@@ -13,10 +13,16 @@
 
         
         <h1>Events index page</h1>
-        <ul>
-            <% for(let i = 0; i < events.length; i++) { %>
-                <li>
-			        The <a href="/events/<%=i%>"><%=events[i].title; %></a> is  <%=events[i].description; %>.
+
+        <% if (events.length) { %>
+          <% for (let i = 0; i < events.length; i++) { %>
+
+            <a href="/events/<%= events[i]._id %>">
+              <h4><%= events[i].title %></h4>
+
+        
+        
+                
 			        <% if(events[i].attending === true){ %>
 				        You have an event
 			        <% } else { %>
@@ -24,13 +30,15 @@
 			        <% } %>
 			    <!--  ADD DELETE FORM HERE-->
 			    <form>
-                    <form action="/events/<%=i; %>?_method=DELETE" method="POST">
-                </form>
+            <form action="/events/<%= i; %>?_method=DELETE" method="POST">
+          </form>
                 <!-- Add edit link here  -->
-			        <a href="/events/<%=i; %>/edit">Edit</a>
-                </li>
-            <% } %>
-        </ul>
+			        <a href="/events/<%= i; %>/edit">Edit</a>
+                
+        <% } %>
         
+            <% } else { %>
+      <h4>No events coming up</h4>
+    <% } %>
     </body>
 </html>
