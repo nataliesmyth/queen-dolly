@@ -21,7 +21,10 @@ app.use(express.urlencoded({extended: false}));
 app.use(methodOverride('_method'));
 
 app.get('/events/', (req, res) => {
-    res.render('index.ejs');
+    res.render('index.ejs', {
+        events: events,
+
+    });
 });
 
 //put this above your show.ejs file
@@ -68,7 +71,7 @@ app.put('/events/:index', (req, res) => { //:index is the index of our event arr
     } else { //if not checked, req.body.readyToEat is undefined
         req.body.readyToEat = false;
     }
-	events[req.params.index] = req.body; //in our fruits array, find the index that is specified in the url (:index).  Set that element to the value of req.body (the input data)
+	events[req.params.index] = req.body; //in our events array, find the index that is specified in the url (:index).  Set that element to the value of req.body (the input data)
 	res.redirect('/events'); //redirect to the index page
 });
 
