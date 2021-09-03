@@ -50,7 +50,7 @@ app.get('/events/:index/edit', function(req, res){
 
 
 app.post('/events', (req, res)=>{
-    if(req.body.title = 'true'){ //if checked, req.body.readyToEat is set to 'on'
+    if(req.body.attending = 'true'){ //if checked, req.body.readyToEat is set to 'on'
         req.body.description = true; //do some data correction
     } else { //if not checked, req.body.readyToEat is undefined
         req.body.date = false; //do some data correction
