@@ -27,10 +27,7 @@ app.get('/events/', (req, res) => {
     });
 });
 
-//put this above your show.ejs file
-app.get('/events/new', (req, res) => {
-    res.render('new.ejs');
-});
+
 
 app.get('/events/:index', function(req, res) {
     res.render('show.ejs', {
@@ -49,16 +46,7 @@ app.get('/events/:index/edit', function(req, res){
 });
 
 
-app.post('/events', (req, res)=>{
-    if(req.body.attending = 'true'){ //if checked, req.body.readyToEat is set to 'on'
-        req.body.description = true; //do some data correction
-    } else { //if not checked, req.body.readyToEat is undefined
-        req.body.date = false; //do some data correction
-    }
-    events.push(req.body);
-    console.log(events);
-    res.redirect('/events');
-});
+
 
 app.delete('/events/:index', (req, res) => {
 	events.splice(req.params.index, 1); //remove the item from the array
