@@ -1,5 +1,3 @@
-![Logo of the project](https://www.linktoimage.com)
-
 # Calendar App
 
 > Calendar application for managing your appointments. The end product will be an event coordinating app to manage events with family and friends.
