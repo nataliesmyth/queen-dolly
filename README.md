@@ -1,77 +1,78 @@
-![Logo of the project](https://raw.githubusercontent.com/jehna/readme-best-practices/master/sample-logo.png)
+![Logo of the project](https://www.linktoimage.com)
 
-# Family App
+# Calendar App
 
-> An app to coordinate the busy lives of our families and loved ones
+> Calendar application for managing your appointments. The end product will be an event coordinating app to manage events with family and friends.
 
-A brief description of your project, what it is used for and how does life get
-awesome when someone starts to use it.
+## Installation
 
-## Installing / Getting started
+### Clone
 
-A quick introduction of the minimal setup you need to get a hello world up &
-running.
+- Clone this repo to your local machine using ```git clone https://github.com/muzhaqi16/eCalendar```
+- ```cd``` into ```queen-dolly```
 
-Download Node.js and NPM [here](https://nodejs.org/en/)
+### Install
 
-```shell
-npm install
-awesome-project start
-awesome-project "Do something!"  # prints "Nah."
-```
+- Run ```npm install | yarn install```
 
-Here you should say what actually happens when you execute the code above.
+### Start
+
+- Run ```npm start | yarn start```
+
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+---
 
 ### Initial Configuration
 
 Some projects require initial configuration (e.g. access tokens or keys, `npm i`).
 This is the section where you would document those requirements.
 
-## Developing
+## Features
 
-Here's a brief intro about what a developer must do in order to start developing
-the project further:
+- Add multiple events
+- Update events
+- Delete events
+- Save events to local storage
+- View events for the current day
 
+---
+
+## Contributing
+
+> I would love your contributions at making this repo better and adding new features. 
+> To get started at contributing at this repo follow the steps below...
+
+### Step 1
+
+- **Option 1**
+  - 🍴 Fork this repo!
+
+- **Option 2**
+  - 👯 Clone this repo to your local machine using `git clone https://github.com/nataliesmyth/LINK`
+
+### Step 2
 ```shell
 git clone https://github.com/your/queen-dolly.git
 cd queen-dolly/
 npm install
 ```
 
+- **HACK AWAY!** 🔨🔨🔨
+
+### Step 3
+
+- 🔃 Create a new pull request here: `LINK`
+
+---
+
+## Developing
+
+Here's a brief intro about what a developer must do in order to start developing
+the project further:
+
 And state what happens step-by-step.
 
-### Building
-
-If your project needs some additional steps for the developer to build the
-project after some code changes, state them here:
-
-```shell
-./configure
-make
-make install
-```
-
-Here again you should state what actually happens when the code above gets
-executed.
-
-### Deploying / Publishing
-
-In case there's some step you have to take that publishes this project to a
-server, this is the right time to state it.
-
-```shell
-packagemanager deploy awesome-project -s server.com -u username -p password
-```
-
-And again you'd need to tell what the previous code actually does.
-
-## Features
-
-What's all the bells and whistles this project can perform?
-
-* What's the main functionality
-* You can also do another thing
-* If you get really randy, you can even do this
 
 ## Configuration
 
