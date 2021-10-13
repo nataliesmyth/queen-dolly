@@ -4,11 +4,22 @@
 
 > Calendar application for managing your appointments. The end product will be an event coordinating app to manage events with family and friends.
 
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Features](#features)
+- [Contributing](#contributing)
+- [Links](#links)
+- [License](#license)
+
+---
+
 ## Installation
 
 ### Clone
 
-- Clone this repo to your local machine using ```git clone https://github.com/muzhaqi16/eCalendar```
+- Clone this repo to your local machine using ```git clone https://github.com/nataliesmyth/queen-dolly.git```
 - ```cd``` into ```queen-dolly```
 
 ### Install
@@ -35,18 +46,17 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ## Contributing
 
-> I would love your contributions at making this repo better and adding new features. 
+> If you'd like to contribute, please fork the repository and use a feature
+branch. Pull requests are warmly welcome!
 > To get started at contributing at this repo follow the steps below...
 
 ### Step 1
 
-- **Option 1**
-  - 🍴 Fork this repo!
-
-- **Option 2**
-  - 👯 Clone this repo to your local machine using `git clone https://github.com/nataliesmyth/LINK`
+- 🍴 Fork this repo!
 
 ### Step 2
+
+  - 👯 Clone this repo to your local machine using `git clone https://github.com/nataliesmyth/queen-dolly.git`
 
 ```shell
 git clone https://github.com/your/queen-dolly.git
@@ -60,25 +70,9 @@ npm install
 
 ### Step 4
 
-- 🔃 Create a new pull request here: `LINK`
+- 🔃 Create a new pull request here: `https://github.com/nataliesmyth/queen-dolly/pulls`
 
 ---
-
-## Contributing
-
-When you publish something open source, one of the greatest motivations is that
-anyone can just jump in and start contributing to your project.
-
-These paragraphs are meant to welcome those kind souls to feel that they are
-needed. You should state something like:
-
-"If you'd like to contribute, please fork the repository and use a feature
-branch. Pull requests are warmly welcome."
-
-If there's anything else the developer needs to know (e.g. the code style
-guide), you should link it here. If there's a lot of things to take into
-consideration, it is common to separate this section to its own file called
-`CONTRIBUTING.md` (or similar). If so, you should say that it exists here.
 
 ## Links
 
