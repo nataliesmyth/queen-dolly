@@ -1,3 +1,5 @@
+![Logo of the project](https://raw.githubusercontent.com/jehna/readme-best-practices/master/sample-logo.png)
+
 # Calendar App
 
 > Calendar application for managing your appointments. The end product will be an event coordinating app to manage events with family and friends.
@@ -20,11 +22,6 @@
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ---
-
-### Initial Configuration
-
-Some projects require initial configuration (e.g. access tokens or keys, `npm i`).
-This is the section where you would document those requirements.
 
 ## Features
 
@@ -50,53 +47,22 @@ This is the section where you would document those requirements.
   - 👯 Clone this repo to your local machine using `git clone https://github.com/nataliesmyth/LINK`
 
 ### Step 2
+
 ```shell
 git clone https://github.com/your/queen-dolly.git
 cd queen-dolly/
 npm install
 ```
 
+### Step 3
+
 - **HACK AWAY!** 🔨🔨🔨
 
-### Step 3
+### Step 4
 
 - 🔃 Create a new pull request here: `LINK`
 
 ---
-
-## Developing
-
-Here's a brief intro about what a developer must do in order to start developing
-the project further:
-
-And state what happens step-by-step.
-
-
-## Configuration
-
-Here you should write what are all of the configurations a user can enter when
-using the project.
-
-### Argument 1
-
-Type: `String`  
-Default: `'default value'`
-
-State what an argument does and how you can use it. If needed, you can provide
-an example below.
-
-Example:
-
-```bash
-awesome-project "Some other value"  # Prints "You're nailing this readme!"
-```
-
-#### Argument 2
-
-Type: `Number|Boolean`  
-Default: 100
-
-Copy-paste as many of these as you need.
 
 ## Contributing
 
@@ -115,10 +81,6 @@ consideration, it is common to separate this section to its own file called
 `CONTRIBUTING.md` (or similar). If so, you should say that it exists here.
 
 ## Links
-
-Even though this information can be found inside the project on machine-readable
-format like in a .json file, it's good to include a summary of most useful
-links to humans using your project. You can include links like:
 
 *Project homepage: <https://nataliesmyth.github.com/queen-dolly/>
 *Repository: <https://github.com/nataliesmyth/queen-dolly/>
