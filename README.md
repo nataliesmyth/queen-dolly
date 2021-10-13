@@ -76,15 +76,15 @@ npm install
 
 ## Links
 
-*Project homepage: <https://nataliesmyth.github.com/queen-dolly/>
-*Repository: <https://github.com/nataliesmyth/queen-dolly/>
-*Issue tracker: <https://github.com/nataliesmyth/queen-dolly/issues>
-  *In case of sensitive bugs like security vulnerabilities, please contact
+- Project homepage: <https://nataliesmyth.github.com/queen-dolly/>
+- Repository: <https://github.com/nataliesmyth/queen-dolly/>
+- Issue tracker: <https://github.com/nataliesmyth/queen-dolly/issues>
+  - In case of sensitive bugs like security vulnerabilities, please contact
     nataliesmyth11@gmail.com directly instead of using issue tracker. We value your effort
     to improve the security and privacy of this project!
-*Related projects:
-  *Your other project: <https://github.com/nataliesmyth/other-project/>
-  *Someone else's project: <https://github.com/someones/awesome-project/>
+- Related projects:
+  - Your other project: <https://github.com/nataliesmyth/other-project/>
+  - Someone else's project: <https://github.com/someones/awesome-project/>
 
 ## Licensing
 
