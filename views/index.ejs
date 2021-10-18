@@ -25,6 +25,36 @@
           <h4><%= events[i].name %></h4>
         </a>
         
+
+        <h1>Events index page</h1>
+
+        <% if (events.length) { %>
+          <% for (let i = 0; i < events.length; i++) { %>
+
+            <a href="/events/<%= events[i]._id %>">
+              <h4><%= events[i].title %></h4>
+
+        
+        
+                
+			        <% if(events[i].attending === true){ %>
+				        You have an event
+			       
+			        <% } %>
+			    <!--  ADD DELETE FORM HERE-->
+          <form action="/events/<%=i; %>?_method=DELETE" method="POST">
+            <input type="submit" value="DELETE"/>
+          </form>
+                <!-- Add edit link here  -->
+			        <a href="/events/<%= i; %>/edit">Edit</a>
+                
+        <% } %>
+        
+            <% } else { %>
+      <h4>No events coming up</h4>
+    <% } %>
+    </body>
+
         <!-- Delete Button -->
         <form style="display: inline-block;" method="POST" action="/events/<%= events[i]._id %>?_method=DELETE">
           <button type="submit">Delete</button>
@@ -47,4 +77,5 @@
   </main>
 
 </body>
+
 </html>

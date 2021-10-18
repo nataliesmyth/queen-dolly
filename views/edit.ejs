@@ -7,6 +7,20 @@
     </head>
     <body>
 
+
+    <form action="/events/<%=index%>?_method=PUT" method="POST">
+		Title: <input type="text" name="title" value="<%=event.title%>"/><br/>
+		Description: <input type="text" name="description" value="<%=event.description%>"/><br/>
+		Date: <input type="date" name="date" value="event.date">
+        Attending: <input type="checkbox" name="attending" value="<%=event.attending%>"
+			<% if(event.attending = true){ %>
+				checked
+			<% } %>
+		/>
+		<br/>
+		<input type="submit" name="" value="Submit Changes"/>
+        </form>
+
         <main>
             <h1>Edit Event Page</h1>
         <!--  ADD action attribute to form tag-->
@@ -26,5 +40,6 @@
 
 
         </main>
+
     </body>
 </html>

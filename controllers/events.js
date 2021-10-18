@@ -12,6 +12,7 @@ router.get('/new', (req, res) => {
 
 router.post('/', (req, res)=>{
     if(req.body.title = 'true'){ //if checked, req.body.readyToEat is set to 'on'
+
         req.body.description = true; //do some data correction
     } else { //if not checked, req.body.readyToEat is undefined
         req.body.date = false; //do some data correction
@@ -20,6 +21,7 @@ router.post('/', (req, res)=>{
     console.log(events);
     res.redirect('/events');
 });
+
 
 // -------------- 404 Route ---------------- //
 

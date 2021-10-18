@@ -4,7 +4,6 @@
 
 > Calendar application for managing your appointments. The end product will be an event coordinating app to manage events with family and friends.
 
-
 ## Table of Contents
 
 - [Installation](#installation)
@@ -46,25 +45,12 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ## Contributing
 
-> If you'd like to contribute, please fork the repository and use a feature
-branch. Pull requests are warmly welcome!
-> To get started at contributing at this repo follow the steps below...
-
 ### Step 1
 
 - 🍴 Fork this repo!
 
-### Step 2
-
   - 👯 Clone this repo to your local machine using `git clone https://github.com/nataliesmyth/queen-dolly.git`
 
-```shell
-git clone https://github.com/your/queen-dolly.git
-cd queen-dolly/
-npm install
-```
-
-### Step 3
 
 - **HACK AWAY!** 🔨🔨🔨
 
