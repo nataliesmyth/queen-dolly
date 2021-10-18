@@ -6,14 +6,27 @@
         <link rel="stylesheet" href="/css/app.css">
     </head>
     <body>
-        <h1>New Events page</h1>
-        <!--  NOTE: action will be the route, method will be the HTTP verb-->
-        <form action="/events" method="POST">
-            Title: <input type="text" name="name" /><br/>
-            Description: <input type="text" name="description" /><br/>
-            Date: <input type="datetime-local" min="2021-08-30" name="datetime" id="datetime"/><br/>
-            Attending: <input type="checkbox" name="attending" id="">
-            <input type="submit" name="" value="Create Event"/>
-        </form>
+
+        <header>
+            <nav>
+              <a href="/">Home</a>
+              <a href="/events">events</a>
+              <a href="/events/new">Add event</a>
+            </nav>
+        </header>
+
+        <main>
+            <h1>Create Event</h1>
+            <!--  NOTE: action will be the route, method will be the HTTP verb-->
+            <form action="/events" method="POST">
+                Title: <input type="text" name="name" /><br/>
+                Description: <input type="text" name="description" /><br/>
+                Date: <input type="datetime-local" min="2021-08-30" name="datetime" id="datetime"/><br/>
+                Attending: <input type="checkbox" name="attending" id="">
+                <button type="submit">Create Event</button>
+            </form>
+
+        </main>
+
     </body>
 </html>
