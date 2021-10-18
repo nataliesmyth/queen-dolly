@@ -1,24 +1,39 @@
 const express = require('express');
 const app = express();
-const events = require('./models/events.js');
 const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
+const db = mongoose.connection;
 //include the method-override package
 var methodOverride = require('method-override');
+const PORT = process.env.PORT || 4000;
+
+
+// Events Controller
+const eventsController = require('./controllers/events.js');
+app.use('/events', eventsController);
 
 // set the view engine to ejs
 app.set('view engine', 'ejs');
 
 
-// Middleware
+
+// -------------- Middleware ---------------- //
+
+
 app.use((req, res, next) => {
     console.log('I run for all routes');
     next();
 });
 
-app.use(express.urlencoded({extended: false}));
 
-//use methodOverride.  We'll be adding a query parameter to our delete form named _method
+// app.use(express.urlencoded({extended: false}));
+
+
+
+// Method Override- changes GET requests to DELETE if the request includes a method override query param
+// We'll be adding a query parameter to our delete form named _method
 app.use(methodOverride('_method'));
+
 
 app.get('/events/', (req, res) => {
     res.render('index.ejs', {
@@ -35,17 +50,15 @@ app.get('/events/:index', function(req, res) {
     })
 });
 
-app.get('/events/:index/edit', function(req, res){
-	res.render(
-		'edit.ejs', //render views/edit.ejs
-		{ //pass in an object that contains
-			event: events[req.params.index], //the event object
-			index: req.params.index //... and its index in the array
-		}
-	);
-});
+// BodyParser: Parses the request object and puts the data into a property called 'body'
+// .use() method responds to ALL requests (GET, PUT/PATCH/,POST, DELETE)
+app.use(express.urlencoded({extended: false}));
+
+// -------------- Routes ---------------- //
 
 
+
+app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
 
 
 app.delete('/events/:index', (req, res) => {
@@ -66,4 +79,3 @@ app.put('/events/:index', (req, res) => { //:index is the index of our event arr
 app.listen(3000, () => {
     console.log('i am listening')
 });
-
